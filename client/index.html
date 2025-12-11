@@ -12,22 +12,88 @@
     <header>
       <img src="./images/amazonImg.png" alt="blank" height="50px" />
       <nav>
-        <a id="header-nav" href="/">Home</a>
-        <a id="header-nav" href="/">About</a>
-        <a id="header-nav" href="/">Products</a>
-        <a id="header-nav" href="/">Contact</a>
+        <a id="header-nav" href="Home">Home</a>
+        <a id="header-nav" href="About">About</a>
+        <a id="header-nav" href="Products">Products</a>
+        <a id="header-nav" href="Contact">Contact</a>
       </nav>
     </header>
     <main>
-      <p>main</p>
+      <div id="product-container">
+        <div id="product-img-container">
+          <img
+            id="product-img"
+            src="./images/monitoriImg.jpg"
+            height="500px"
+            width="auto"
+          />
+        </div>
+        <div id="product-info">
+          <div id="product-info-container">
+            <h2 id="product-title">
+              Amazon Basics 27-inch Gaming Monitor Black
+            </h2>
+            <div id="product-desc-container">
+              <h4 id="product-desc">About this item :</h4>
+              <ul>
+                <li>
+                  A Better Way to Work: This electric standing desk has a wide
+                  height adjustment range (from 72cm to 118cm), so you can
+                  easily switch between sitting and standing. The height
+                  adjustable desk enables you to find your optimal ergonomic
+                  position for work & study, improving posture, enhancing
+                  comfort, and boosting productivity.
+                </li>
+                <li>
+                  Sturdy & Durable Structure: Built with a reinforced steel
+                  frame and high-quality desktop, the sit stand desk has a Max
+                  load of 80kg, providing reliable support for your devices &
+                  essentials. Whether you've got dual monitors, a desktop PC, or
+                  equipment & supplies for activities like art, this home office
+                  desk is designed to handle it all.
+                </li>
+                <li>
+                  Smooth & Stable Lifting: This electric standing desk helps you
+                  stay focused with seamless transitions between sitting and
+                  standing. The stand up desk lifts your setup smoothly &
+                  quietly all the way up to full height.
+                </li>
+              </ul>
+            </div>
+            <div id="buy-add-btns-container">
+              <div id="quantity-container">
+                <p id="quantity-text">Quantity</p>
+                <input id="quantity" type="number" min="1" max="10" value="1" />
+              </div>
+              <p id="product-price">£155.00</p>
+              <button id="buy-now-btn">Buy Now!</button>
+              <button id="add-to-basket-btn">Add To Basket!</button>
+            </div>
+          </div>
+          <div id="product-reviews-container">
+            <h2>Product Reviews</h2>
+            <div id="leave-review-container">
+              <form id="review-form">
+                <label for="name">Name: </label>
+                <input type="text" name="name" required />
+                <label for="content">Review: </label>
+                <input type="text" name="content" required />
+                <button type="submit">Submit</button>
+              </form>
+              <button id="get-data">Get Data</button>
+            </div>
+            <div id="product-review-insert"></div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
-      <p>Footer Text</p>
+      <p id="footer-title">Amazon ©</p>
       <nav>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Products</a>
-        <a href="/">Contact</a>
+        <a href="Home">Home</a>
+        <a href="About">About</a>
+        <a href="Products">Products</a>
+        <a href="Contact">Contact</a>
       </nav>
     </footer>
   </body>
