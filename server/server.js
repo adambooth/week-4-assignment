@@ -51,6 +51,16 @@ app.get("/new-reviews", async (req, res) => {
     result += `<div id="inserted-review">
                 <p id="inserted-review-name" >Written By : ${html[i].name}</p>
                 <p id="inserted-review-content" >${html[i].content}</p>
+                <img
+                  src="./images/likeImg.png"
+                  alt="Like button"
+                  id="like-btn"
+                />
+                <img
+                  src="./images/binImg.png"
+                  alt="Delete button"
+                  id="delete-btn"
+                />
               </div>`;
   }
 

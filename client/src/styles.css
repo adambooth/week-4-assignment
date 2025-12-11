@@ -302,6 +302,16 @@ a {
   padding: 10px;
 }
 
+#like-btn {
+  max-width: 30px;
+  height: auto;
+}
+
+#delete-btn {
+  max-width: 30px;
+  height: auto;
+}
+
 /* --------------------------------------------------Media-------------------------------------------------------------- */
 
 @media (max-width: 1350px) {
