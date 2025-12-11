@@ -49,8 +49,8 @@ app.get("/new-reviews", async (req, res) => {
     //loop through each id
     console.log(html);
     result += `<div id="inserted-review">
-                <p>Name : ${html[i].name}</p>
-                <p>${html[i].content}</p>
+                <p id="inserted-review-name" >Written By : ${html[i].name}</p>
+                <p id="inserted-review-content" >${html[i].content}</p>
               </div>`;
   }
 

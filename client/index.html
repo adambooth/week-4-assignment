@@ -73,14 +73,28 @@
           <div id="product-reviews-container">
             <h2>Product Reviews</h2>
             <div id="leave-review-container">
+              <h3>Leave A Review</h3>
               <form id="review-form">
-                <label for="name">Name: </label>
-                <input type="text" name="name" required />
-                <label for="content">Review: </label>
-                <input type="text" name="content" required />
-                <button type="submit">Submit</button>
+                <label for="name"></label>
+                <input
+                  id="name-input"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+                <label for="content"></label>
+                <textarea
+                  id="review-input"
+                  name="content"
+                  placeholder="Type review here...(255 Characters Max)"
+                  minlength="1"
+                  maxlength="255"
+                  required
+                ></textarea>
+
+                <button id="submit-btn" type="submit">Submit</button>
               </form>
-              <button id="get-data">Get Data</button>
             </div>
             <div id="product-review-insert"></div>
           </div>
