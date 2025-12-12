@@ -14,6 +14,7 @@ Deploying to render.
 Use of Github.
 Responsiveness.
 Form Validation.
+Adding hover, active & animations to buttons.
 
 Things ive learnt:
 I can successfully say i can setup a client, server and deploy with ease using render and github.

@@ -40,8 +40,8 @@ h1 {
   color: rgb(255, 255, 255);
   padding: 10px;
   margin: 5px;
-  border: 2px solid rgb(255, 255, 255);
   border-radius: 5px;
+  font-size: 17px;
 }
 
 /* --------------------------------------------------Body-------------------------------------------------------------- */
@@ -64,14 +64,83 @@ body {
 
 #product-img-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 55px;
+  gap: 10px;
 }
 
 #product-img {
   width: 100%;
   max-width: 500px;
+  height: auto;
+}
+
+#img-bought-together-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#bought-together-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: rgba(173, 216, 230, 0.377);
+  margin: 20px;
+}
+
+#bought-together-product-1 {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 60px 10px 10px 10px;
+  gap: 20px;
+}
+
+#bought-together-product-2 {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 60px 10px 10px 10px;
+  gap: 20px;
+}
+#bought-together-product-3 {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 10px 10px 10px;
+  gap: 20px;
+}
+#bought-together-product-4 {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 10px 10px 10px;
+  gap: 20px;
+}
+
+#bought-together-img {
+  width: 100%;
+  max-height: 200px;
   height: auto;
 }
 
@@ -193,6 +262,10 @@ ul {
   background-color: #bdc000;
 }
 
+#buy-now-btn:active {
+  animation: size 0.1s linear;
+}
+
 #add-to-basket-btn {
   margin: 10px;
   padding: 10px 25px 10px 25px;
@@ -205,6 +278,10 @@ ul {
 
 #add-to-basket-btn:hover {
   background-color: #c48002;
+}
+
+#add-to-basket-btn:active {
+  animation: size 0.1s linear;
 }
 
 #leave-review-container {
@@ -304,6 +381,10 @@ a {
   padding: 10px;
 }
 
+#header-nav:hover {
+  background-color: rgb(160, 160, 160);
+}
+
 /* --------------------------------------------------Media-------------------------------------------------------------- */
 
 @media (max-width: 1350px) {
@@ -357,6 +438,25 @@ a {
     scale: 1;
   }
   100% {
-    scale: 1.02;
+    scale: 1.05;
+  }
+}
+
+@media (max-width: 700px) {
+  #bought-together-product-4 {
+    padding: 0;
+    margin: 0;
+  }
+  #bought-together-product-3 {
+    padding: 0;
+    margin: 0;
+  }
+  #bought-together-product-2 {
+    padding: 0;
+    margin: 0;
+  }
+  #bought-together-product-2 {
+    padding: 0;
+    margin: 0;
   }
 }

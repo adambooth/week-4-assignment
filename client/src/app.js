@@ -37,3 +37,16 @@ async function getDataFunc() {
 }
 
 getDataFunc();
+
+//--------------------------------------------------------Update Price-----------------------------------------------
+
+const price = document.getElementById("product-price");
+
+const quantity = document.getElementById("quantity");
+
+quantity.addEventListener("input", handlereviewSubmit);
+
+function handlereviewSubmit(event) {
+  const newPrice = event.target.value * 155;
+  price.textContent = `£${newPrice}`;
+}
