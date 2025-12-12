@@ -49,8 +49,11 @@ app.get("/new-reviews", async (req, res) => {
     //loop through each id
     console.log(html);
     result += `<div id="inserted-review">
+                <div id="review-info-container">
                 <p id="inserted-review-name" >Written By : ${html[i].name}</p>
                 <p id="inserted-review-content" >${html[i].content}</p>
+                </div>
+                <div id="review-btn-container">
                 <img
                   src="./images/likeImg.png"
                   alt="Like button"
@@ -61,6 +64,7 @@ app.get("/new-reviews", async (req, res) => {
                   alt="Delete button"
                   id="delete-btn"
                 />
+                </div>
               </div>`;
   }
 

@@ -27,7 +27,7 @@ async function getDataFunc() {
     method: "GET",
   });
 
-  const html = await response.text(); // get back rendered HTML
+  const html = await response.text();
   console.log(html);
 
   const mainReviewContainer = document.getElementById("product-review-insert");

@@ -219,15 +219,27 @@ ul {
 }
 
 #inserted-review {
+  display: flex;
+  flex-direction: row;
+}
+
+#review-info-container {
   background-color: rgb(231, 231, 231);
   padding: 10px 30px 10px 30px;
   margin: 10px;
   border-radius: 10px;
   border: 1px solid black;
-  width: 90%;
+  max-width: 80%;
   flex-wrap: block;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+#review-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #product-review-insert {
@@ -305,11 +317,13 @@ a {
 #like-btn {
   max-width: 30px;
   height: auto;
+  margin: 5px;
 }
 
 #delete-btn {
   max-width: 30px;
   height: auto;
+  margin: 5px;
 }
 
 /* --------------------------------------------------Media-------------------------------------------------------------- */
