@@ -19,6 +19,11 @@ Adding hover, active & animations to buttons.
 Things ive learnt:
 I can successfully say i can setup a client, server and deploy with ease using render and github.
 I learnt how to setup a database to send and receieve from it.
+I got a better understanding of async functions
 
 Requested Feedback:
 A youtube video on liking and deleting comments/reviews if possible.
+
+TODO:
+Change URL to actual render link
+Reset Reviews Add new ones

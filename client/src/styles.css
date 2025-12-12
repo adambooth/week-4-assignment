@@ -322,7 +322,8 @@ ul {
 #review-form {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
