@@ -29,14 +29,13 @@ app.get("/", (req, res) => {
   res.send("<h1>Welcome to the server!</h1>");
 });
 
-app.post("/new-reviews", (req, res) => {
+app.post("/new-reviews", async (req, res) => {
   const newReview = req.body.formValues;
   console.log(newReview);
-  db.query(`INSERT INTO reviews (name, content, likes) VALUES ($1, $2, $3)`, [
-    newReview.name,
-    newReview.content,
-    newReview.likes,
-  ]);
+  await db.query(
+    `INSERT INTO reviews (name, content, likes) VALUES ($1, $2, $3)`,
+    [newReview.name, newReview.content, newReview.likes]
+  );
   res.json({ status: "success", values: newReview });
 });
 

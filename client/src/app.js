@@ -4,20 +4,21 @@ const reviewForm = document.getElementById("review-form");
 
 reviewForm.addEventListener("submit", handlereviewSubmit);
 
-function handlereviewSubmit(event) {
+async function handlereviewSubmit(event) {
   event.preventDefault();
   const formDatatemplate = new FormData(reviewForm);
   const formValues = Object.fromEntries(formDatatemplate);
   console.log(formValues);
 
-  fetch("http://localhost:8080/new-reviews", {
+  await fetch("http://localhost:8080/new-reviews", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ formValues }),
   });
-  getDataFunc();
+  await getDataFunc();
+  reviewForm.reset();
 }
 
 //--------------------------------------------------------Get Data-----------------------------------------------
