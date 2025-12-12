@@ -32,9 +32,10 @@ app.get("/", (req, res) => {
 app.post("/new-reviews", (req, res) => {
   const newReview = req.body.formValues;
   console.log(newReview);
-  db.query(`INSERT INTO reviews (name, content) VALUES ($1, $2)`, [
+  db.query(`INSERT INTO reviews (name, content, likes) VALUES ($1, $2, $3)`, [
     newReview.name,
     newReview.content,
+    newReview.likes,
   ]);
   res.json({ status: "success", values: newReview });
 });
@@ -48,22 +49,13 @@ app.get("/new-reviews", async (req, res) => {
   for (let i = 0; i < html.length; i++) {
     //loop through each id
     console.log(html);
-    result += `<div id="inserted-review">
+    result += `<div id="inserted-review" class="unique-id-${[i]}">
                 <div id="review-info-container">
-                <p id="inserted-review-name" >Written By : ${html[i].name}</p>
+                <p id="inserted-review-name" >Author : ${html[i].name}</p>
+                <div id="inserted-review-content" >
+                <p id="inserted-review-content" >Review : </p>
                 <p id="inserted-review-content" >${html[i].content}</p>
                 </div>
-                <div id="review-btn-container">
-                <img
-                  src="./images/likeImg.png"
-                  alt="Like button"
-                  id="like-btn"
-                />
-                <img
-                  src="./images/binImg.png"
-                  alt="Delete button"
-                  id="delete-btn"
-                />
                 </div>
               </div>`;
   }
