@@ -10,7 +10,7 @@ async function handlereviewSubmit(event) {
   const formValues = Object.fromEntries(formDatatemplate);
   console.log(formValues);
 
-  await fetch("http://localhost:8080/new-reviews", {
+  await fetch("https://week-4-assignment-web.onrender.com/new-reviews", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -24,9 +24,12 @@ async function handlereviewSubmit(event) {
 //--------------------------------------------------------Get Data-----------------------------------------------
 
 async function getDataFunc() {
-  const response = await fetch("http://localhost:8080/new-reviews", {
-    method: "GET",
-  });
+  const response = await fetch(
+    "https://week-4-assignment-web.onrender.com/new-reviews",
+    {
+      method: "GET",
+    }
+  );
 
   const html = await response.text();
   console.log(html);
@@ -44,9 +47,9 @@ const price = document.getElementById("product-price");
 
 const quantity = document.getElementById("quantity");
 
-quantity.addEventListener("input", handlereviewSubmit);
+quantity.addEventListener("input", updatePrice);
 
-function handlereviewSubmit(event) {
+function updatePrice(event) {
   const newPrice = event.target.value * 155;
   price.textContent = `£${newPrice}`;
 }

@@ -23,7 +23,3 @@ I got a better understanding of async functions
 
 Requested Feedback:
 A youtube video on liking and deleting comments/reviews if possible.
-
-TODO:
-Change URL to actual render link
-Reset Reviews Add new ones
